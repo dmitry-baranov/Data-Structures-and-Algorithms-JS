@@ -8,10 +8,18 @@ function reverse(str) {
 	}
 	const array = [];
 	for (var i = str.length - 1, j = 0; i >= 0; i--, j++) {
-		array[j] = str.charAt(i);
+		array[j] = str[i];
 	}
 	return array.join('');
 }
 
+function reverse2(str){
+	return str.split('').reverse().join('');
+}
+
+const reverse3 = str => str.split('').reverse().join('');
+
 const string = 'Hi My name is Dmitry';
 console.log(reverse(string));
+console.log(reverse2(string));
+console.log(reverse3(string));
