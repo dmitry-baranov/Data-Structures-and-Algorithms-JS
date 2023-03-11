@@ -15,7 +15,7 @@ class MyArray {
   }
 
   pop(){
-    const lastItem = this.data[this.length];
+    const lastItem = this.data[this.length - 1];
     delete this.data[this.length-1];
     this.length--;
     return lastItem;
@@ -28,10 +28,11 @@ class MyArray {
   }
 
   shiftItems(index){
-    console.log('shift item index:' + index + ' item:' + this.data[index]);
+    console.log('shift  index:' + index + ' item:' + this.data[index]);
     for (var i = index; i < this.length-1; i++) {
       this.data[i] = this.data[i+1];
     }
+    delete this.data[length-1];
     this.length--;
   }
 }
