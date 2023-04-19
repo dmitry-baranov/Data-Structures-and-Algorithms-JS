@@ -32,7 +32,7 @@ class MyArray {
     for (var i = index; i < this.length-1; i++) {
       this.data[i] = this.data[i+1];
     }
-    delete this.data[length-1];
+    delete this.data[this.length-1];
     this.length--;
   }
 }
